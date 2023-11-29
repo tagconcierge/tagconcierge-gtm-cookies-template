@@ -13,3 +13,6 @@ This basic UI sits on top of GTM Consent Mode API and consists of two screens:
 **Settings:**
 
 ![Settings Screen](/assets/example_settings.png)
+
+
+Underlying JS script handling UI was written in vanilla JS and have 2.3 kB.
