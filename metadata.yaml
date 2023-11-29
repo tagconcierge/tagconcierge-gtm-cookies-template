@@ -15,5 +15,5 @@
 homepage: "https://tagconcierge.com/"
 documentation: "https://docs.tagconcierge.com/"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: 5034126128c0f359b0ba955d18fa7112f85cf04d
     changeNotes: Initial Version
