@@ -63,10 +63,6 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "light",
         "displayValue": "Light"
-      },
-      {
-        "value": "dark",
-        "displayValue": "Dark"
       }
     ],
     "simpleValueType": true
@@ -75,7 +71,7 @@ ___TEMPLATE_PARAMETERS___
     "type": "PARAM_TABLE",
     "name": "consent_types",
     "displayName": "Consent Types",
-    "defaultValue": [{"name":"ad_storage","title":"Ad storage","description":"Enables storage, such as cookies, related to advertising.","default":"denied"},{"name":"analytics_storage","title":"Analytics storage","description":"Enables storage, such as cookies, related to analytics (for example, visit duration).","default":"denied"},{"name":"functionality_storage","title":"Functionality storage","description":"Enables storage that supports the functionality of the website or app such as language settings.","default":"denied"},{"name":"personalization_storage","title":"Personalization storage","description":"Enables storage related to personalization such as video recommendations.","default":"denied"},{"name":"security_storage","title":"Security storage","description":"Enables storage related to security such as authentication functionality, fraud prevention, and other user protection.","default":"denied"}],
+    "defaultValue": [{"name":"ad_storage","title":"Ad storage","description":"Enables storage, such as cookies, related to advertising.","default":"denied"},{"name":"ad_user_data","title":"Ad user data","description":"Sets consent for sending user data related to advertising to Google.","default":"denied"},{"name":"ad_personalization","title":"Ad personalization","description":"Sets consent for personalized advertising..","default":"denied"},{"name":"analytics_storage","title":"Analytics storage","description":"Enables storage, such as cookies, related to analytics (for example, visit duration).","default":"denied"},{"name":"functionality_storage","title":"Functionality storage","description":"Enables storage that supports the functionality of the website or app such as language settings.","default":"denied"},{"name":"personalization_storage","title":"Personalization storage","description":"Enables storage related to personalization such as video recommendations.","default":"denied"},{"name":"security_storage","title":"Security storage","description":"Enables storage related to security such as authentication functionality, fraud prevention, and other user protection.","default":"denied"}],
     "paramTableColumns": [
       {
         "param": {
@@ -90,7 +86,7 @@ ___TEMPLATE_PARAMETERS___
         "param": {
           "type": "TEXT",
           "name": "title",
-          "displayName": "Description",
+          "displayName": "Title",
           "simpleValueType": true
         },
         "isUnique": false
@@ -238,7 +234,7 @@ const EVENT_HANDLERS = Object.freeze({
 
 logToConsole(data);
 
-if (null === templateStorage.getItem('initiatlized')) {
+if (null === templateStorage.getItem('initialized')) {
 const gtmCookiesConfig = {
     display: {
         mode: data.mode,
@@ -338,10 +334,13 @@ injectScript('https://assets.tagconcierge.com/gtm-cookies.js?v=15');
 
 const DEFAULT_CONSENT_CONFIG = Object.freeze({
   ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
   analytics_storage: 'denied',
   functionality_storage: 'denied',
   personalization_storage: 'denied',
-  security_storage: 'denied'
+  security_storage: 'denied',
+  wait_for_update: 500
 });
 
 (function main(data) {
