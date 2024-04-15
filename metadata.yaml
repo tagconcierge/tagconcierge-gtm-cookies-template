@@ -1,4 +1,4 @@
-# Copyright 2023 Tag Concierge Sp. z o.o.
+# Copyright 2024 Tag Concierge Sp. z o.o.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,5 +15,5 @@
 homepage: "https://tagconcierge.com/"
 documentation: "https://docs.tagconcierge.com/"
 versions:
-  - sha: 5034126128c0f359b0ba955d18fa7112f85cf04d
+  - sha: a98bcc2f4d903b001d330812401537e3806abcf9
     changeNotes: Initial Version
