@@ -15,5 +15,7 @@
 homepage: "https://tagconcierge.com/"
 documentation: "https://docs.tagconcierge.com/"
 versions:
+  - sha: 127b5a01ceadf943dac6c8d8ef3b882ab775df57
+    changeNotes: Simplify the code and upgrade consent-banner-js
   - sha: a98bcc2f4d903b001d330812401537e3806abcf9
     changeNotes: Initial Version
